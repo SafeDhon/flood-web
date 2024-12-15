@@ -7,117 +7,40 @@ body,
   width: 100%;
 }
 
-.inputBox {
-  
-  position: absolute;
-  z-index: 1;
-  top: 70px;
-  right: 15px;
-  text-align: end;
+.origin {
+  margin-right: 5px;
+  width: 100%;
+  height: 30px;
 }
-.input {
-  margin-top: 15px;
-  padding: 10px;
-  background-color: white;
-  border-radius: 5px;
+.vehicle {
+  margin-left: 5px;
+  width: 100%;
+}
+.add-btn {
+  margin-left: 10px;
+  width: 100%;
+  height: 25px;
+}
 
+.addBox {
+  background-color: gainsboro;
+  padding: 10px;
+}
+
+.origincar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.add {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-}
-
-.startRoute-btn {
-  color: white;
-  background-color: red;
-  height: 35px;
-  width: 100px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.popup {
-  position: fixed;
-  top: 100vh;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  transition: top 0ms ease-in-out 300ms;
-}
-
-.popup .overlay {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 100ms ease-in-out 200ms;
-}
-
-.popup .popup-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.15);
-  width: 95%;
-  max-width: 350px;
-  background: #fff;
-  padding: 25px;
-  border-radius: 20px;
-  opacity: 0;
-  box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.05);
-  transition: all 300ms ease-in-out;
-}
-
-.popup .popup-content .controls {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0px 0px;
-}
-
-.popup .popup-content .controls button {
-  padding: 10px 20px;
-  border: none;
-  outline: none;
-  font-size: 15px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.popup .popup-content .controls .close-btn {
-  background: transparent;
-  color: #3284ed;
-}
-
-.popup .popup-content .controls .submit-btn {
-  background: #3284ed;
-  color: #fff;
-}
-
-.popup .active {
-  top: 0px;
-  transition: top 0ms ease-in-out 0ms;
-}
-
-.popup .active .overlay {
-  opacity: 1;
-  transition: all 300ms ease-in-out;
-}
-
-.popup .active .popup-content {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
 }
 
 /* ************************** ACCESS TOKEN ************************** */

@@ -22,44 +22,49 @@
       crossorigin="anonymous"
     />
   </head>
-
+  <style>
+    select:required:invalid {
+      color: gainsboro;
+    }
+    option[value=""][disabled] {
+      display: none;
+    }
+    option {
+      color: black;
+    }
+  </style>
   <body>
     <div id="viewDiv"></div>
-    <div id="expandContentDiv">
-      <div class="bg-white">
+    <div id="addBoxDiv" class="addBoxDiv">
+      <div id="addBox" class="addBox">
         <div id="searchDiv"></div>
-        <p>Please select importance</p>
-
-        <button onclick="console.log('high')">High</button>
-
-        <button onclick="console.log('medium')">Medium</button>
-
-        <button onclick="console.log('low')">Low</button>
+        <div id="origincar" class="origincar">
+          <select class="origin" name="origin" id="origin" >
+            <option value="" disabled selected>Origin</option>
+            <option value="wing1">Wing 1</option>
+            <option value="wing2">Wing 2</option>
+            <option value="wing3">Wing 3</option>
+          </select>
+          <select class="vehicle" name="vehicle" id="vehicle" >
+            <option  value=""selected disabled hidden>Vehicle</option>
+            <option value="boat">Boat</option>
+            <option value="unimog">Unimog</option>
+            <option value="helicopter">Helicopter</option>
+          </select>
+        </div>
+        <div id="add" class="add">
+          <input id="bags" class="bags"type="number"placeholder="Bags"> </input>
+         
+          <button  class="add-btn" onclick="addToList()">Add</button>
+        </div>
       </div>
     </div>
-    <!-- <div id="inputBox" class="inputBox">
-      <button class="startRoute-btn" onclick="hideShow()">Start Route</button>
-      <div id="input" class="input">
-        <div>
-          <input type="text" />
-         
-          <select name="cars" id="cars">
-            <option value="Wing 1">Wing 1</option>
-            <option value="Wing 2">Wing 2</option>
-            <option value="Wing 3">Wing 3</option>
-          </select>
-          <select name="vehicle" id="vehicle">
-            <option value="Boat">Boat</option>
-            <option value="Car">Car</option>
-          </select>
-        </div>
-        <div>
-          <input type="number" />
-          <button>Add</button>
-        </div>
+    <div id="routeListDiv" class="routeListDiv">
+      <div id="routeList" class="routeList">
+        <h1>Test</h1>
+        <h2>Test List</h2>
       </div>
-    </div> -->
-
+     </div>
     <script src="map.js"></script>
   </body>
 </html>

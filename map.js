@@ -1,28 +1,37 @@
-var div = document.getElementById("input");
-var display = 0;
-
-var addRoute = {
-  origin: {
-    lat: "",
-    lon: "",
-  },
-  destination: {
-    lat: "",
-    lon: "",
-  },
-  vehicle: "",
-  bags: "",
+let routes = [];
+var destination = {
+  name: "",
+  lat: "",
+  lon: "",
 };
-function hideShow() {
-  if (display == 1) {
-    div.style.display = "block";
-    display = 0;
-  } else {
-    div.style.display = "none";
-    display = 1;
-  }
-  var data = JSON.parse(localStorage.getItem("myObject"));
-  console.log(data);
+
+function resetForm() {
+  document.getElementById("origin").value = "";
+  document.getElementById("vehicle").value = "";
+  document.getElementById("bags").value = "";
+}
+
+function addToList() {
+  var route = {
+    origin: "",
+    destination: {
+      lat: "",
+      lon: "",
+    },
+    vehicle: "",
+    bags: "",
+  };
+
+  route.origin = document.getElementById("origin").value;
+  route.vehicle = document.getElementById("vehicle").value;
+  route.bags = document.getElementById("bags").value;
+  route.destination.lat = destination.lat;
+  route.destination.lon = destination.lon;
+
+  routes.push(route);
+  // route = "";
+  console.log(routes);
+  resetForm();
 }
 
 require([
@@ -139,20 +148,30 @@ require([
     container: "searchDiv",
   });
 
-  var element = document.createElement("div");
-  element.className =
-    "esri-icon-collection esri-widget--button esri-widget esri-interactive";
-  element.addEventListener("click", function (evt) {
-    console.log("clicked");
-  });
+  // var element = document.createElement("div");
+  // element.className =
+  //   "esri-icon-collection esri-widget--button esri-widget esri-interactive";
+  // element.addEventListener("click", function (evt) {
+  //   console.log("clicked");
+  // });
 
-  const expandContentDiv = document.getElementById("expandContentDiv");
-  const expand = new Expand({
-    content: expandContentDiv,
+  const addBoxDiv = document.getElementById("addBoxDiv");
+  
+  const expandAddBox = new Expand({
+    content: addBoxDiv,
     expanded: true,
   });
   view.when(() => {
-    view.ui.add(expand, "top-right");
+    view.ui.add(expandAddBox, "top-right");
+  });
+
+  const routeListDiv = document.getElementById("routeListDiv");
+  const expandrouteList = new Expand({
+    content: routeListDiv,
+    expanded: false,
+  });
+  view.when(() => {
+    view.ui.add(expandrouteList, "bottom-right");
   });
 
   // view.ui.add(element, "bottom-right");
@@ -174,12 +193,12 @@ require([
 
   searchWidget.on("search-complete", function (result) {
     var geom = result.results[0].results[0].feature.geometry;
-    console.log(geom.latitude);
-    console.log(geom.longitude);
     // json.destination.lat = geom.latitude;
     // json.destination.long = geom.longitude;
     // localStorage.setItem('desLat', geom.latitude)
     // localStorage.setItem('desLon', geom.longitude)
+    destination.lat = geom.latitude;
+    destination.lon = geom.longitude;
     localStorage.setItem(
       "myObject",
       JSON.stringify({ desLat: geom.latitude, desLon: geom.longitude })
