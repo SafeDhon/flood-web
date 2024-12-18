@@ -7,7 +7,7 @@
       name="viewport"
       content="initial-scale=1,maximum-scale=1,user-scalable=no"
     />
-    <title>Directions widget</title>
+    <title>Flood Route</title>
     <link
       rel="stylesheet"
       href="https://js.arcgis.com/4.31/esri/themes/light/main.css"
@@ -37,34 +37,102 @@
     <div id="viewDiv"></div>
     <div id="addBoxDiv" class="addBoxDiv">
       <div id="addBox" class="addBox">
-        <div id="searchDiv"></div>
+          <div id="searchDiv" class="searchDiv"></div>
         <div id="origincar" class="origincar">
           <select class="origin" name="origin" id="origin" >
             <option value="" disabled selected>Origin</option>
-            <option value="wing1">Wing 1</option>
-            <option value="wing2">Wing 2</option>
-            <option value="wing3">Wing 3</option>
+            <option value="Wing 1">Wing 1</option>
+            <option value="Wing 2">Wing 2</option>
+            <option value="Wing 3">Wing 3</option>
           </select>
           <select class="vehicle" name="vehicle" id="vehicle" >
             <option  value=""selected disabled hidden>Vehicle</option>
-            <option value="boat">Boat</option>
-            <option value="unimog">Unimog</option>
-            <option value="helicopter">Helicopter</option>
+            <option value="Boat">Boat</option>
+            <option value="Unimog">Unimog</option>
+            <option value="Helicopter">Helicopter</option>
           </select>
         </div>
         <div id="add" class="add">
           <input id="bags" class="bags"type="number"placeholder="Bags"> </input>
          
-          <button  class="add-btn" onclick="addToList()">Add</button>
+          <button  class="add-btn" onclick="onFormSubmit()">Add</button>
         </div>
       </div>
     </div>
     <div id="routeListDiv" class="routeListDiv">
-      <div id="routeList" class="routeList">
-        <h1>Test</h1>
-        <h2>Test List</h2>
+      <div id="routes" class="routes">
+        <h3>Route</h3>
+        <table class="list" id="routeList">
+          <thead>
+            <tr>
+              <th>Origin</th>
+              <th>Destination</th>
+              <th>Vehicle</th>
+              <th>Bags</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
      </div>
     <script src="map.js"></script>
+    <!-- <table>
+      <tr>
+        <td>
+          <form
+            onsubmit="event.preventDefault();onFormSubmit();"
+            autocomplete="off"
+          >
+            <div>
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                id="fullName"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                name="empCode"
+                placeholder="EMP Code"
+                id="empCode"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                name="salary"
+                placeholder="Salary"
+                id="salary"
+              />
+            </div>
+            <div>
+              <input type="text" name="city" placeholder="City" id="city" />
+            </div>
+            <div>
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </td>
+        <td>
+          <table class="list" id="employeeList">
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>EMP Code</th>
+                <th>Salary</th>
+                <th>City</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script> -->
   </body>
 </html>

@@ -7,6 +7,14 @@ body,
   width: 100%;
 }
 
+.routes {
+  margin: 10px;
+}
+
+table {
+  width: 600px;
+}
+
 .origin {
   margin-right: 5px;
   width: 100%;
