@@ -1,3 +1,7 @@
+import * as data from "./data.js";
+
+
+
 var countryStateCityinfo = {
   "กองบิน 1": {
     "Western Aus": {
@@ -10,7 +14,7 @@ var countryStateCityinfo = {
       Burnie: ["412", "1324"],
     },
   },
-  กองบิน2: {
+  "กองบิน 2": {
     Bavaria: {
       Munich: ["1234", "12341"],
       Numemberg: ["14", "234"],
@@ -20,7 +24,7 @@ var countryStateCityinfo = {
       Surat: ["444", "21324"],
     },
   },
-  กองบิน3: {
+  "กองบิน 3": {
     Alberta: {
       Calgary: ["41234", "3645634"],
       Edmonton: ["6345", "32345"],
@@ -30,18 +34,103 @@ var countryStateCityinfo = {
       Winnipeg: ["63456345", "2345"],
     },
   },
+  "กองบิน 4": {
+    Alberta: {
+      Calgary: ["41234"],
+      Edmonton: ["6345"],
+    },
+    Manitoba: {
+      Brandon: ["342423"],
+      Winnipeg: ["63456345"],
+    },
+  },
+  "กองบิน 5": {
+    Alberta: {
+      Calgary: ["41234"],
+      Edmonton: ["6345"],
+    },
+    Manitoba: {
+      Brandon: ["342423"],
+      Winnipeg: ["63456345"],
+    },
+  },
+  "กองบิน 6": {
+    Alberta: {
+      Calgary: ["41234"],
+      Edmonton: ["6345"],
+    },
+    Manitoba: {
+      Brandon: ["342423"],
+      Winnipeg: ["63456345"],
+    },
+  },
+  "กองบิน 7": {
+    Alberta: {
+      Calgary: ["41234"],
+      Edmonton: ["6345"],
+    },
+    Manitoba: {
+      Brandon: ["342423"],
+      Winnipeg: ["63456345"],
+    },
+  },
+  "กองบิน 21": {
+    Alberta: {
+      Calgary: ["41234"],
+      Edmonton: ["6345"],
+    },
+    Manitoba: {
+      Brandon: ["342423"],
+      Winnipeg: ["63456345"],
+    },
+  },
+  "กองบิน 23": {
+    "อุดรธานี": {
+      Calgary: ["41234"],
+      Edmonton: ["6345"],
+    },
+    Manitoba: {
+      Brandon: ["342423"],
+      Winnipeg: ["63456345"],
+    },
+  },
+  "กองบิน 41": {
+    Alberta: {
+      Calgary: ["41234"],
+      Edmonton: ["6345"],
+    },
+    Manitoba: {
+      Brandon: ["342423"],
+      Winnipeg: ["63456345"],
+    },
+  },
+  "กองบิน 46": {
+    Alberta: {
+      Calgary: ["41234"],
+      Edmonton: ["6345"],
+    },
+    Manitoba: {
+      Brandon: ["342423"],
+      Winnipeg: ["63456345"],
+    },
+  },
+  "กองบิน 56": {
+    Alberta: {
+      Calgary: ["41234"],
+      Edmonton: ["6345"],
+    },
+    Manitoba: {
+      Brandon: ["342423"],
+      Winnipeg: ["63456345"],
+    },
+  },
 };
-
-const peopleArray = [
-  { id: 1, name: "Jerry", age: 58, zip: "100" },
-  { id: 2, name: "Jessica", age: 25, zip: "110" },
-  { id: 3, name: "Lauren", age: 32, zip: "100" },
-  { id: 4, name: "Fabian", age: 28, zip: "41234" },
-];
+ const peopleArray = data.peopleArray;
 
 var origin = 0;
 
 window.onload = function () {
+ 
   const selectCountry = document.getElementById("country"),
     selectState = document.getElementById("state"),
     selectCity = document.getElementById("city"),
@@ -54,8 +143,8 @@ window.onload = function () {
 
   var onChoose = "";
 
-  list = document.querySelector(".list");
-  addList = (array, element) => {
+  const list = document.querySelector(".list");
+  const addList = (array, element) => {
     array.forEach((item) => {
       const li = document.createElement("li");
       var checkbox = document.createElement("input");
