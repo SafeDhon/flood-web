@@ -4,6 +4,11 @@
     <title>Home</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="homeStyle.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root">
@@ -13,17 +18,27 @@
         <a href="/lorem" onclick="route()">Lorem</a>
       </nav> -->
       <div id="main-page"></div>
-      <h1>Header</h1>
-      <div className="container">
+      <header class="appbar">
+        <div class="appbar-left">
+          <img
+            src="images/logo.png"
+            alt="logo"
+            class="appbar-logo"
+          />
+          <span class="appbar-title">ROYAL THAI AIR FORCE</span>
+        </div>
+        <button class="appbar-btn">Information</button>
+      </header>
+      <div class="container">
         <form action="#">
           <select name="" id="country">
-            <option value="{true}">-- กองบิน --</option></select
+            <option value="{true}">กองบิน</option></select
           ><select name="" id="state">
-            <option value="{true}">-- จังหวัด --</option></select
+            <option value="{true}">จังหวัด</option></select
           ><select name="" id="city">
-            <option value="{true}">-- อำเภอ --</option></select
+            <option value="{true}">อำเภอ/เขต</option></select
           ><select name="" id="zip">
-            <option value="{true}">-- ตำบล --</option>
+            <option value="{true}">ตำบล/แขวง</option>
           </select>
         </form>
 
@@ -34,6 +49,6 @@
     </div>
 
     <script src="js/router.js"></script>
-    <script src="js/home.js"  type="module"></script>
+    <script src="js/home.js" type="module"></script>
   </body>
 </html>

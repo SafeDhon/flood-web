@@ -1,3 +1,20 @@
+body {
+  font-family: "Noto Sans Thai", sans-serif;
+    margin: 0;
+  padding: 0; 
+  /* padding-top: 20px; */
+  /* padding-right: 10px; */
+  /* padding-bottom: 20px; */
+  /* padding-left: 10px; */
+}
+
+select {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
 form {
   display: flex;
   justify-content: space-between;
@@ -20,7 +37,8 @@ form select {
 }
 
 .list:empty::before {
-  content: "Empty";
+  content: "กรุณาเลือก ตำบล/แขวง";
+  color: gray;
   font-size: 1.5em;
   height: 400px;
   width: 100%;
@@ -37,24 +55,79 @@ form select {
 }
 
 .list li {
-
   list-style: none;
   border-bottom: 1px solid #2d4454;
   margin: 10px 0;
   padding-bottom: 10px;
-  font-size: 1.5em;
+  font-size: 20px;
 }
 
 button {
+  font-family: "Noto Sans Thai", sans-serif;
   cursor: pointer;
   margin-top: 16px;
-  background-color: #04AA6D; /* Green */
+  background-color: #04aa6d; /* Green */
   border: none;
   border-radius: 8px;
   color: white;
-  padding: 12px 32px;
+  padding: 12px 24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.appbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4b4b4b; 
+  /* padding: 0 20px; */
+  padding-right: 8px;
+  height: 70px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+  font-family: 'Noto Sans Thai', sans-serif;
+  color: white;
+}
+
+.appbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.appbar-logo {
+  height: 40px;
+  width: 80px;
+  margin-right: 12px;
+  object-fit: contain;  /* รักษาสัดส่วนรูปโดยไม่บิด */
+}
+
+.appbar-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+
+.appbar-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+   margin: 0;  
+}
+
+.appbar-btn:hover {
+  background-color: white;
+  color: #4b4b4b;
+}
+
+.container {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 }

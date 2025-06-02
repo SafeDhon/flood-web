@@ -4,29 +4,74 @@
     <title>Home</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="fillin.css" />
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
   <body>
-  <h1>Fillin Page</h1>
-  <table class="table table-striped">
+  <header class="appbar">
+    <div class="appbar-left">
+          <img
+            src="../images/logo.png"
+            alt="logo"
+            class="appbar-logo"
+          />
+          <span class="appbar-title">ROYAL THAI AIR FORCE</span>
+        </div>
+        <button class="appbar-btn">Information</button>
+      </header>
+      <div class="container">
+<table class="table table-striped">
+  <colgroup>
+    <col style="width: 19%;" /> <!-- ชุมชน -->
+    <col style="width: 9%;" />  <!-- ผู้ประสบภัย -->
+    <col style="width: 9%;" />  <!-- กลุ่มเปราะบาง -->
+    <col style="width: 9%;" /> <!-- ความเสียหาย -->
+    <col style="width: 9%;" /> <!-- พึ่งพาตนเอง -->
+    <col style="width: 9%;" /> <!-- เข้าถึงพื้นที่ -->
+    <col style="width: 9%;" />  <!-- ทอ. เท่านั้น -->
+    <col style="width: 9%;" />  <!-- ประสบภัย -->
+    <col style="width: 9%;" />  <!-- ความรุนแรง -->
+    <col style="width: 9%;" /> <!-- ที่จะเกิดซ้ำ -->
+  </colgroup>
+    <tr class="table-head">
+      <!-- <th>ID</th> -->
+      <th>ชุมชน</th>
+      <!-- <th>Lat</th>
+      <th>Long</th> -->
+      <th>จำนวน</th>
+      <th>จำนวน</th>
+      <th>ระดับ</th>
+      <th>ความสามารถ</th>
+      <th>ความลำบาก</th>
+  
+      <th>ใช้พาหนะของ</th>
+      <th>ระยะเวลา</th>
+      <th>ความรุนแรง</th>
+      <th>ความเสี่ยง</th>
+    </tr>
     <tr class="bg-info">
       <!-- <th>ID</th> -->
-      <th>Name</th>
+      <th></th>
       <!-- <th>Lat</th>
       <th>Long</th> -->
       <th>ผู้ประสบภัย</th>
       <th>กลุ่มเปราะบาง</th>
-      <th>ระดับความเสียหาย</th>
-      <th>ความสามารถในการพึ่งพาตนเอง</th>
-      <th>ความลำบากในการเข้าถึงพื้นที่</th>
+      <th>ความเสียหาย</th>
+      <th>พึ่งพาตนเอง</th>
+      <th>เข้าถึงพื้นที่</th>
   
-      <th>ใช้พาหนะของ ทอ. เท่านั้น</th>
-      <th>ระยะเวลาประสบภัย</th>
-      <th>ความรุนแรง</th>
-      <th>ความเสี่ยงเกิดซ้ำ</th>
+      <th>ทอ. เท่านั้น</th>
+      <th>ประสบภัย</th>
+      <th></th>
+      <th>ที่อาจเกิดซ้ำ</th>
     </tr>
     <tbody id="myTable"></tbody>
   </table>
   <button id="btnCal">Calculate</button>
+
+      </div>
+  
 
   <script src="fillin.js" type="module"></script>
   </body>

@@ -27,24 +27,24 @@ function buildTable(data) {
                   
                   <td>${data[i].name}</td>
               
-                  <td><input type="number" name="numberInput" min="0"></td>
-                  <td><input type="number" name="numberInput" min="0"></td>
+                  <td><input type="number" class="number-input" min="0"></td>
+                  <td><input type="number" class="number-input" min="0"></td>
                   <td>
-                    <select name="level">
+                    <select name="level" class="level-select">
                       <option value="1">Level 1</option>
                       <option value="2">Level 2</option>
                       <option value="3">Level 3</option>
                     </select>
                   </td>
                   <td>
-                    <select name="level">
+                    <select name="level" class="level-select">
                       <option value="1">Level 1</option>
                       <option value="2">Level 2</option>
                       <option value="3">Level 3</option>
                     </select>
                   </td>
                   <td>
-                    <select name="level">
+                    <select name="level" class="level-select">
                       <option value="1">Level 1</option>
                       <option value="2">Level 2</option>
                       <option value="3">Level 3</option>
@@ -52,22 +52,22 @@ function buildTable(data) {
                   </td>
                  
                   <td>
-                    <select name="level">
+                    <select name="level" class="level-select">
                       <option value="1">Level 1</option>
                       <option value="2">Level 2</option>
                       <option value="3">Level 3</option>
                     </select>
                   </td>
-                  <td><input type="number" name="numberInput" min="0"></td>
+                  <td><input type="number" class="number-input" min="0"></td>
                   <td>
-                    <select name="level">
+                    <select name="level" class="level-select">
                       <option value="1">Level 1</option>
                       <option value="2">Level 2</option>
                       <option value="3">Level 3</option>
                     </select>
                   </td>
                   <td>
-                    <select name="level">
+                    <select name="level" class="level-select">
                       <option value="1">Level 1</option>
                       <option value="2">Level 2</option>
                       <option value="3">Level 3</option>
